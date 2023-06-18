@@ -12,7 +12,8 @@
         <ul>
           <li><a class="nav-link scrollto active" [routerLink]="['/home']">Home</a></li>
           <li><a class="nav-link scrollto " [routerLink]="['/laws']">Law Search</a></li>
-          <li><a class="nav-link scrollto" [routerLink]="['/lawyers']">Lawyers Search</a></li>
+          <li><a *ngIf="user == 'User'"  class="nav-link scrollto" [routerLink]="['/lawyers']">Lawyers Search</a></li>
+          <li><a *ngIf="user == 'Lawyer'"  class="nav-link scrollto" [routerLink]="['/all-tickets']">All Tickets</a></li>
           <li><a class="nav-link scrollto" [routerLink]="['/raise-ticket']">Raise Ticket</a></li>
           <li><a class="nav-link scrollto" [routerLink]="['/my-tickets']">My Tickets</a></li>
           <li><a class="nav-link scrollto" [routerLink]="['/contact-us']">Contact</a></li>

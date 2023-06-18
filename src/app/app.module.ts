@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserTicketsComponent } from './User-portal/user-tickets/user-tickets.component';
 import { LawyerHeaderComponent } from './Lawyer-portal/lawyer-header/lawyer-header.component';
 import { ContactComponent } from './Shared/Components/contact/contact.component';
+import { AllTicketsComponent } from './User-portal/all-tickets/all-tickets.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ContactComponent } from './Shared/Components/contact/contact.component'
     RaiseTicketComponent,
     UserTicketsComponent,
     LawyerHeaderComponent,
-    ContactComponent
+    ContactComponent,
+    AllTicketsComponent
   
 
   ],

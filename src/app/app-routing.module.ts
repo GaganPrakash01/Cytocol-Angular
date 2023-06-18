@@ -8,6 +8,7 @@ import { LawyerSearchComponent } from './User-portal/lawyer-search/lawyer-search
 import { RaiseTicketComponent } from './User-portal/raise-ticket/raise-ticket.component';
 import { UserTicketsComponent } from './User-portal/user-tickets/user-tickets.component';
 import { ContactComponent } from './Shared/Components/contact/contact.component';
+import { AllTicketsComponent } from './User-portal/all-tickets/all-tickets.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:'contact-us',
     component:ContactComponent
+  },
+  {
+    path:'all-tickets',
+    component:AllTicketsComponent
   },
 ];
 

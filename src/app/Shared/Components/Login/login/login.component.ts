@@ -25,10 +25,14 @@ export class LoginComponent implements OnInit{
       console.log(role);
       switch(role) {
         case 'user':
+          localStorage.setItem('user', 'User');
+          console.log(localStorage.getItem('user'))
           this.router.navigate(['/home']);
           break;
         case 'lawyer':
-          this.router.navigate(['/lawyer/home']);
+          localStorage.setItem('user', 'Lawyer');
+          console.log(localStorage.getItem('user'))
+          this.router.navigate(['/home']);
           break;
         case 'null':
           alert('Invalid Login Crendentials ');

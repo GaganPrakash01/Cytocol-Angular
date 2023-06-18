@@ -2,16 +2,16 @@
 <br><br>
 <br>
 <div class="container">
-    <h1>Your Tickets</h1>
+    <h1>All Tickets</h1>
     <div class="row">
-      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let ticket of tickets" >
+        <ng-container *ngFor="let ticket of tickets">
+      <div class="col-sm-6 col-md-4 col-lg-3" *ngIf="ticket.IsProcessing ==false">
         <div class="card mb-4 box-shadow" >
           <div class="card-body">
             <h4 class="card-title">{{ticket.Title}}</h4>
             <p class="card-text">{{ticket.Description}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="status">
-                <span *ngIf="ticket.IsProcessing === true && ticket.IsResolved == false" class="badge badge-success">Processing</span>
                 <span *ngIf="ticket.IsResolved === true " class="badge badge-success">Resolved</span>
                 <span *ngIf="ticket.IsResolved === false && ticket.IsProcessing == false" class="badge badge-danger">Pending</span>
               </div>
@@ -19,10 +19,11 @@
             </div>
             <br>
             <img class="ticket-image" src="{{ticket.ImageDataUrl}}" alt="Ticket Image" class="img-fluid">
-            <button *ngIf="user == 'Lawyer' && ticket.IsResolved == false" class="btn btn-success btn-sm" (click)="closeTicket(ticket)">Close Ticket</button>
+            <button class="btn btn-success btn-sm" (click)="takeUpTicket(ticket)">Take up</button>
           </div>
         </div>
       </div>
+    </ng-container>
     </div>
   </div>
 

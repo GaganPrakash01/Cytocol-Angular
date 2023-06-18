@@ -1,19 +1,20 @@
 .container {
     padding: 30px 15px;
   }
+
+  h1 {
+    color:#3498db;
+  }
   .ticket-image {
     max-width: 80%;
     height: auto;
-  }
-  h1 {
-    color: #3498db;
   }
   .page-header-2 {
     display: flex;
     justify-content: center;
 }
 button {
-  margin-top: 10px;
+    margin-top: 10px;
 }
   
 .page-heading {
