@@ -1,0 +1,29 @@
+<app-header></app-header>
+<br><br>
+<br>
+<div class="container">
+    <h1>Your Tickets</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let ticket of tickets">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body">
+            <h4 class="card-title">{{ticket.Title}}</h4>
+            <p class="card-text">{{ticket.Description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="status">
+                <span *ngIf="ticket.IsResolved === true" class="badge badge-success">Resolved</span>
+                <span *ngIf="ticket.IsResolved === false" class="badge badge-danger">Pending</span>
+              </div>
+              <small class="text-muted">{{ticket.CreatedAt | date}}</small>
+            </div>
+            <br>
+            <img class="ticket-image" src="{{ticket.ImageDataUrl}}" alt="Ticket Image" class="img-fluid">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+  

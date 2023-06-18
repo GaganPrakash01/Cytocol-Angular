@@ -1,0 +1,60 @@
+<app-header></app-header>
+
+<br><br><br><br><br><br>
+<div class="page-header-2">
+    <div class="page-heading">Cyber Laws</div>
+</div>
+
+<div class="page-header">
+    <div class="searchBox">
+        <input class="form-control mr-sm-2 search" type="search" placeholder="Search for Laws ..."
+            aria-label="Search">
+        <button class="btn my-2 my-sm-0 button" (click)="searchLaws()" type="submit">Search</button>
+    </div>
+</div>
+
+<div id="liveAlertPlaceholder"></div>
+<div class="laws-body">
+
+
+    <div class="laws-table">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-hover" >
+
+            <ng-container matColumnDef="Id" style="padding-left: 20px;">
+                <th mat-header-cell *matHeaderCellDef style="padding-left: 20px;">Id</th>
+                <td mat-cell *matCellDef="let element" style="padding-left: 20px;">{{element.Id}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Chapter">
+                <th mat-header-cell *matHeaderCellDef>Chapter</th>
+                <td mat-cell *matCellDef="let element">{{element.Chapter}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Section">
+                <th mat-header-cell *matHeaderCellDef>Section</th>
+                <td mat-cell *matCellDef="let element">{{element.Section}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Title">
+                <th mat-header-cell *matHeaderCellDef>Title</th>
+                <td mat-cell *matCellDef="let element">{{element.Title}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Description">
+                <th mat-header-cell *matHeaderCellDef>Description</th>
+                <td mat-cell *matCellDef="let element">{{element.Description}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="availableColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: availableColumns;" [routerLink]="['./',row.Id]"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="pageSizeOptions" [pageSize]="pageSize" (page)="onPageSizeChange($event)"
+            [length]="totalLaws.length" showFirstLastButtons aria-label="Select page of Cyber Laws"></mat-paginator>
+
+    </div>
+
+</div>
+
+
+<app-footer></app-footer>

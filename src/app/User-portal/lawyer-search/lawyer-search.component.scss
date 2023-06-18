@@ -1,0 +1,135 @@
+.lawyers-table {
+    width: 90%;
+    margin-left:5%;
+  }
+  
+  .mat-elevation-z8 {
+    padding-left: 20px;
+  }
+  
+  .dot::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  
+  .dot.active::before {
+    background-color: green;
+  }
+  
+  .dot.inactive::before {
+    background-color: red;
+  }
+  
+  .lawyers-body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #liveAlertPlaceholder {
+    margin: 10px;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  .page-header-2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .page-heading {
+    color: #084897;
+    font-family: 'inter';
+    font-size: x-large;
+    font-weight: 700;
+    position: relative;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    align-self: center;
+  }
+  
+  .searchBox {
+    display: flex;
+    width: 400px;
+    align-items: center;
+    height: 35px;
+    margin-left: 100px;
+  }
+  
+  .search {
+    height: 35px;
+  }
+  
+  .searchBox input[type="search"] {
+    margin-right: 10px;
+    border: 1px solid #084897;
+  }
+  
+  .searchBox button {
+    margin-left: 10px;
+    background-color: #084897;
+    color: white;
+    width: 100px;
+    height: 35px;
+  }
+  
+  .page-header .add-button:active {
+    background-color: white;
+    color: #084897;
+  }
+  
+  .page-header .add-button {
+    margin-left: 300px;
+    background-color: #084897;
+    color: white;
+    width: 200px;
+    height: 35px;
+    right: 70%;
+  }
+  
+  .searchBox button:active {
+    background-color: white;
+    color: #084897;
+  }
+  
+  .mat-mdc-row {
+    background-color: white;
+  }
+  
+  .mat-mdc-row:hover {
+    background-color: #f2f2f2; /* Change to a very light gray */
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    color: white; /* Change the text color to white */
+  }
+  
+  .lawyers-table {
+    box-shadow: none;
+    background-color: inherit;
+  }
+  
+  .mat-mdc-header-cell {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'inter';
+  }
+  
+  .mat-mdc-cell {
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+  }
+  

@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<br><br><br><br><br><br>
+<div class="page-header-2">
+    <div class="page-heading">Lawyers</div>
+</div>
+
+<div class="page-header">
+    <div class="searchBox">
+        <input class="form-control mr-sm-2 search" type="search" placeholder="Search for Lawyers ..."
+            aria-label="Search">
+        <button class="btn my-2 my-sm-0 button" (click)="searchLawyers()" type="submit">Search</button>
+    </div>
+</div>
+
+<div id="liveAlertPlaceholder"></div>
+<div class="laws-body">
+
+
+    <div class="lawyers-table">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table table-hover" >
+
+            <ng-container matColumnDef="Id" style="padding-left: 20px;">
+                <th mat-header-cell *matHeaderCellDef style="padding-left: 20px;">Id</th>
+                <td mat-cell *matCellDef="let element" style="padding-left: 20px;">{{element.Id}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{element.Name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Email">
+                <th mat-header-cell *matHeaderCellDef>Email</th>
+                <td mat-cell *matCellDef="let element">{{element.Email}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="UserName">
+                <th mat-header-cell *matHeaderCellDef>Username</th>
+                <td mat-cell *matCellDef="let element">{{element.UserName}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Mobile">
+                <th mat-header-cell *matHeaderCellDef>Mobile</th>
+                <td mat-cell *matCellDef="let element">{{element.Mobile}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="AccountActive">
+                <th mat-header-cell *matHeaderCellDef>Actively Practising</th>
+                <td mat-cell *matCellDef="let element">{{element.AccountActive}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="Location">
+                <th mat-header-cell *matHeaderCellDef>Location</th>
+                <td mat-cell *matCellDef="let element">Bengaluru</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="availableColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: availableColumns;" [routerLink]="['./',row.Id]"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="pageSizeOptions" [pageSize]="pageSize" (page)="onPageSizeChange($event)"
+            [length]="totalLawyers.length" showFirstLastButtons aria-label="Select page of Lawyers"></mat-paginator>
+
+    </div>
+
+</div>
+
+
+<app-footer></app-footer>

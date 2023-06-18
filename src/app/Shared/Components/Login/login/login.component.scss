@@ -1,0 +1,169 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    background: linear-gradient(#959ECC,#084897)!important;
+    
+
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: +450px;
+    top: +95px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: +450px;
+    bottom: +20px;
+}
+form{
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(05px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 300px;
+    width: 90%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 800px;
+    padding: 0 10px;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 10px;
+    width: 90%;
+    background-color: #ffffff;
+    color: black !important;
+    padding: 10px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+  scale:(0.9);
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: rgba(255,255,255,0.27);
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+#logo
+{
+    height: 25px;
+    width: 25px;
+}
+.cardHead
+{
+    display: inline-block;
+    align-items: center;
+}
+
+/* Style for the form element */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Style for the logo image */
+#MainLogo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+/* Style for the login heading */
+h3 {
+  margin-bottom: 20px;
+}
+
+/* Style for the label and input elements */
+
+
+
+
+/* Style for the logo image inside the button */
+#logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
